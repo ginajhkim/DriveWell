@@ -10,11 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+//    @IBAction func btnStart(_ sender: UIButton) {
+//    }
+    
+    @IBOutlet weak var btnStart: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.applyRoundCorners(btnStart)
     }
-
-
+    
+    func applyRoundCorners(_ object:AnyObject) {
+        object.layer.cornerRadius = object.frame.size.width/2
+        object.layer.masksToBounds = true
+    }
+    
 }
 
